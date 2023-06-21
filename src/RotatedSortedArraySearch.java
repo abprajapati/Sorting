@@ -1,4 +1,4 @@
-public class RotatedSoretdArraySearch {
+public class RotatedSortedArraySearch {
     public static void printArr(int[] arr){
         for( int i= 0; i< arr.length; i++){
             System.out.print(arr[i] + " ");
@@ -23,7 +23,7 @@ public class RotatedSoretdArraySearch {
             }
         }
         else{
-            if(arr[mid] >= target && target <= arr[ei] ){
+            if(arr[mid] <= target && target <= arr[ei] ){
                 return searchTarget(arr, target, mid +1, ei);
             }
             else{
@@ -32,8 +32,8 @@ public class RotatedSoretdArraySearch {
         }
     }
     public static void main(String[] args){
-        int[] arr = {3,4,5,6,1,2};
-        int target = 1;
+        int[] arr = {6,7,8,9,10,1,2,3};
+        int target = 2;
         printArr(arr);
         System.out.println(searchTarget(arr, target, 0, arr.length -1));
 
